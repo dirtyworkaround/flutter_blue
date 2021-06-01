@@ -24,6 +24,11 @@ class FlutterBlue {
   static FlutterBlue _instance = new FlutterBlue._();
   static FlutterBlue get instance => _instance;
 
+  static FlutterBlue renewInstance(){
+    _instance = new FlutterBlue._();
+    return _instance;
+  }
+
   /// Log level of the instance, default is all messages (debug).
   LogLevel _logLevel = LogLevel.debug;
   LogLevel get logLevel => _logLevel;
